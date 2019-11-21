@@ -11114,3 +11114,7 @@ a.text-dark:focus {
   border-color: #38c172;
 }
 
+#createClothesForm p#error {
+  color: red;
+}
+

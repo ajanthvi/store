@@ -15,11 +15,13 @@ $(document).on('click', '#createClothButton', function (e) {
         data: $('#createClothesForm').serialize(),
         dataType: 'json',
         success: function (result) {
-            console.log(result);
             if(result.success) {
+                $('#error').css('display','none');;
                 getClothes(1);
                 $('#createClothesForm')[0].reset();
                 $('#createClothButton').modal('toggle');
+            } else {
+                $('#createClothesForm p#error').css('display','block');
             }
         }
     });
@@ -39,3 +41,7 @@ function getClothes(page)
         }
     });
 }
+
+$(document).on('click', '#createModal', function () {
+    $('#createClothesForm')[0].reset();
+});

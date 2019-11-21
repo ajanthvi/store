@@ -66,6 +66,7 @@
                         <input type="text" class="form-control" id="size" name="size" placeholder="Size">
                     </div>
 
+                    <p id="error" style="display: none">Some fields are required</p>
                 </form>
             </div>
             <div class="modal-footer">
